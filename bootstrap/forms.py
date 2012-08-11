@@ -94,7 +94,7 @@ class BootstrapMixin(object):
             # If the field contains errors, render the errors to a <ul>
             # using the error_list helper function.
             # bf_errors = error_list([escape(error) for error in bf.errors])
-            bf_errors = ', '.join([e for e in bf.errors])
+            bf_errors = ', '.join([unicode(e) for e in bf.errors])
         else:
             bf_errors = ''
 
